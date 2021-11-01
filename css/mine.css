@@ -1,0 +1,161 @@
+:root {
+    --bgcolor: #eeeeee;
+    --fgcolor1: #c6c6c6;
+    --fgcolor2: #a2a2a2;
+    --fgcolor3: #7e7e7e;
+    --fgcolor4: #636363;
+    --fgcolor5: #101010;
+    --highlight: rgb(243, 119, 119);
+}
+
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 9px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+    background: var(--bgcolor); 
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--highlight); 
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--fgcolor5); 
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    color: #000;
+}
+body {
+    font-size: 16px;
+}
+a {
+    text-decoration: none;
+}
+.icon {
+    width: 24px;
+    height: auto;
+    display: block;
+    stroke: #000;
+    stroke-width: 2px;
+}
+*[insert], comp-insert {
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+.position-relative {
+    position: relative;
+}
+.position-absolute {
+    position: absolute;
+}
+
+
+
+.flex {
+    display: flex;
+}
+.flex-direction-column {
+    flex-direction: column;
+}
+.flex-grid .col {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+
+.justify-content-start {
+    justify-content: flex-start;
+}
+.justify-content-center {
+    justify-content: center;
+}
+.justify-content-end {
+    justify-content: flex-end;
+}
+.align-items-start {
+    align-items: flex-start;
+}
+.align-items-center {
+    align-items: center;
+}
+.align-items-end {
+    align-items: flex-end;
+}
+
+
+
+.pin-top {
+    top: 0;
+}
+.pin-vertical-center {
+    top: 50%;
+    transform: translateY(-50%);
+}
+.pin-bottom {
+    bottom: 0;
+}
+.pin-left {
+    left: 0;
+}
+.pin-horizontal-center {
+    left: 50%;
+    transform: translateX(-50%);
+}
+.pin-right {
+    right: 0;
+}
+
+
+
+.grid {
+    display: grid;
+}
+.grid.cols-1 {
+    grid-template-columns: auto;
+}
+.grid.cols-2 {
+    grid-template-columns: auto auto;
+}
+.grid.cols-3 {
+    grid-template-columns: auto auto auto;
+}
+.grid.cols-4 {
+    grid-template-columns: auto auto auto auto;
+}
+.grid.cols-5 {
+    grid-template-columns: auto auto auto auto auto;
+}
+
+
+
+
+
+
+
+
+.group-content {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+}

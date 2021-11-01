@@ -1,0 +1,16 @@
+:root {
+    --bg-color: #eeeeee;
+    --fg-color1: #fff;
+}
+
+body {
+    font-family: 'Source_Sans_Pro', sans-serif;
+}
+
+
+
+.icon {
+    width: 27px;
+    stroke: var(--fgcolor3);
+    stroke-width: 2px;
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Boho</title>
+
+    <link rel="stylesheet" href="css/mine.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!--<link rel="stylesheet" href="css/pro.css">-->
+</head>
+<body id="home">
+    <comp-header bgColor="#ff95b4">
+
+        <div insert="col-1-content" for="comp-header">
+            <icon-search stroke="var(--fg-color1)" link="search"></icon-search>
+        </div>
+
+        <div insert="col-2-content" for="comp-header">
+            <comp-brand-name color="var(--fg-color1)">
+                <div for="comp-brand-name" insert="content">Boho Chic</div>
+            </comp-brand-name>
+        </div>
+        
+        <div insert="comp-nav-list" for="comp-header">
+            <comp-nav-list color="var(--fg-color1)">
+
+                <div insert="content" for="comp-nav-list">
+                    <a class="item" href="#">home</a>
+                    <a class="item" href="#">about</a>
+                    <a class="item" href="#">collections</a>
+                    <a class="item" href="#">contact</a>
+                </div>
+    
+            </comp-nav-list>
+        </div>
+        
+        <div insert="col-3-content" for="comp-header">
+            <icon-bag stroke="var(--fg-color1)" link="cart"></icon-bag>
+        </div>
+
+    </comp-header>
+
+    <comp-hero bgColor="red" bgImg="img/symbol-scatter-haikei.png"></comp-hero>
+    <comp-collections-list></comp-collections-list>
+
+
+
+
+
+
+
+    <script src="js/mine.js"></script>
+    <script src="component/header.js"></script>
+    <script src="component/brand-name.js"></script>
+    <script src="component/nav-list.js"></script>
+
+    <script src="component/icon/bag.js"></script>
+    <script src="component/icon/search.js"></script>
+
+    <script src="component/hero.js"></script>
+
+    <script src="component/collection-list.js"></script>
+</body>
+</html>

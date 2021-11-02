@@ -11,7 +11,7 @@ collectionsListTemp.innerHTML = `
         z-index: -1;
     }
     .collections-list .heading h1 {
-        font-size: 300%;
+        font-size: 270%;
         font-family: 'Starfish';
         font-weight: 500;
         transform: translateY(-55%);
@@ -76,7 +76,7 @@ collectionsListTemp.innerHTML = `
         grid-area: collection-info;
     }
     .collections-list .card .info .name {
-        font-size: 210%;
+        font-size: 180%;
         font-weight: 500;
         text-transform: capitalize;
         margin-bottom: 16px;

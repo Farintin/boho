@@ -8,7 +8,7 @@ navListTemp.innerHTML = `
     .menu .item {
         margin: 0 21px;
         font-weight: 700;
-        font-size: 78%;
+        font-size: 84%;
         text-transform: uppercase;
         letter-spacing: 3px;
         color: var(--fgcolor3);

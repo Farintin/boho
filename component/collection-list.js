@@ -2,7 +2,8 @@ const collectionsListTemp = document.createElement("template");
 collectionsListTemp.innerHTML = `
 <style for="comp-collections-list">
     .collections-list {
-        margin-top: 180px;
+        position: relative;
+        z-index: 999;
     }
 
     .collections-list .heading {
@@ -12,9 +13,10 @@ collectionsListTemp.innerHTML = `
     }
     .collections-list .heading h1 {
         font-size: 270%;
-        font-family: 'Starfish';
+        font-family: var(--font1);
         font-weight: 500;
         transform: translateY(-55%);
+        color: pink;
     }
 
     .collections-list main .card {
@@ -40,7 +42,8 @@ collectionsListTemp.innerHTML = `
         top: 0;
     }
     .collections-list main .card:last-child .bg {
-        display: none;
+        /*display: none;
+        height: 60%;*/
     }
     .collections-list main .card:nth-child(even) .wrapper {
         grid-template-areas: "collection-info collection-display";
@@ -80,32 +83,15 @@ collectionsListTemp.innerHTML = `
         font-weight: 500;
         text-transform: capitalize;
         margin-bottom: 16px;
+        color: var(--fgcolor4);
     }
     .collections-list .card .info .desc {
-        font-size: 105%;
         font-weight: 600;
         margin-bottom: 48px;
         color: var(--fgcolor4);
     }
     .collections-list .card .info .name {
-      font-family: 'Starfish';
-    }
-    .collections-list .card .info .desc {
-        font-family: 'Playfair_Display';
-    }
-    .btn {
-        padding: 0 0 12px 0;
-        border: 2px solid var(--fgcolor1);
-        border-width: 0 0 2px 0;
-        width: fit-content;
-        font-family: 'Source_Sans_Pro', sans-serif;
-    }
-    .btn p {
-        letter-spacing: 3px;
-        text-transform: uppercase;
-        font-size: 87%;
-        font-weight: 900;
-        color: var(--fgcolor5);
+      font-family: var(--font1);
     }
 
 
@@ -140,7 +126,7 @@ collectionsListTemp.innerHTML = `
                 
                 <div class="col info">
                     <p class="name">winter collections</p>
-                    <p class="desc">Your style buddies when winter is coming</p>
+                    <p class="text-para desc">Your style buddies when winter is coming</p>
                     <div class="btn">
                         <p>shop now</p>
                     </div>
@@ -159,7 +145,7 @@ collectionsListTemp.innerHTML = `
                 
                 <div class="col info">
                     <p class="name">bathroom collections</p>
-                    <p class="desc">Warmy towel for your bathroom stuff</p>
+                    <p class="text-para desc">Warmy towel for your bathroom stuff</p>
                     <div class="btn">
                         <p>shop now</p>
                     </div>
@@ -178,7 +164,7 @@ collectionsListTemp.innerHTML = `
                 
                 <div class="col info">
                     <p class="name">bathroom collections</p>
-                    <p class="desc">Warmy towel for your bathroom stuff</p>
+                    <p class="text-para desc">Warmy towel for your bathroom stuff</p>
                     <div class="btn">
                         <p>shop now</p>
                     </div>
@@ -197,7 +183,7 @@ collectionsListTemp.innerHTML = `
                 
                 <div class="col info">
                     <p class="name">bathroom collections</p>
-                    <p class="desc">Warmy towel for your bathroom stuff</p>
+                    <p class="text-para desc">Warmy towel for your bathroom stuff</p>
                     <div class="btn">
                         <p>shop now</p>
                     </div>
@@ -216,7 +202,7 @@ collectionsListTemp.innerHTML = `
                 
                 <div class="col info">
                     <p class="name">bathroom collections</p>
-                    <p class="desc">Warmy towel for your bathroom stuff</p>
+                    <p class="text-para desc">Warmy towel for your bathroom stuff</p>
                     <div class="btn">
                         <p>shop now</p>
                     </div>

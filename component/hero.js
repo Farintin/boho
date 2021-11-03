@@ -8,6 +8,7 @@ heroTemp.innerHTML = `
         background-repeat: no-repeat;
         background-size: cover;
         position: relative;
+        z-index: -1;
     }
     .hero .overlay {
         width: 100%;

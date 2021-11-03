@@ -3,7 +3,6 @@ collectionsListTemp.innerHTML = `
 <style for="comp-collections-list">
     .collections-list {
         position: relative;
-        z-index: 999;
     }
 
     .collections-list .heading {
@@ -42,8 +41,12 @@ collectionsListTemp.innerHTML = `
         top: 0;
     }
     .collections-list main .card:last-child .bg {
-        /*display: none;
-        height: 60%;*/
+        height: 60%;
+    }
+    .collections-list main .card:last-child:nth-child(odd) .wrapper {
+        border: 1px solid;
+        border-width: 0 0 150px 0;
+        border-color: rgba(0,0,0,0);
     }
     .collections-list main .card:nth-child(even) .wrapper {
         grid-template-areas: "collection-info collection-display";

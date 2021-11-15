@@ -8,10 +8,13 @@ navListTemp.innerHTML = `
     .menu .item {
         margin: 0 21px;
         font-weight: 700;
-        font-size: 84%;
+        font-size: 81%;
         text-transform: uppercase;
         letter-spacing: 3px;
         color: var(--fgcolor3);
+    }
+    .menu .item.active {
+      color: gold!important;
     }
 </style>
 
@@ -19,7 +22,7 @@ navListTemp.innerHTML = `
 
 <nav class="menu">
 
-  <comp-insert name="content" for="comp-nav-list"></comp-insert>
+  <meta slot="content" refParent="comp-nav-list">
 
 </nav>
 `;

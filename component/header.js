@@ -59,23 +59,23 @@ headerTemp.innerHTML = `
         <div class="row top">
             <div class="col col-1">
                 
-                <comp-insert name="col-1-content" for="comp-header"></comp-insert>
+                <meta slot="col-1-content" refParent="comp-header">
 
             </div>
             <div class="col col-2">
 
-                <comp-insert name="col-2-content" for="comp-header"></comp-insert>
+                <meta slot="col-2-content" refParent="comp-header">
 
             </div>
             <div class="col col-3">
                 
-                <comp-insert name="col-3-content" for="comp-header"></comp-insert>
+                <meta slot="col-3-content" refParent="comp-header">
 
             </div>
         </div>
         <div class="row bottom">
 
-            <comp-insert name="comp-nav-list" for="comp-header"></comp-insert>
+            <meta slot="comp-nav-list" refParent="comp-header">
 
         </div>
     </div>

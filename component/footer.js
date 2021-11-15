@@ -176,9 +176,9 @@ footerTemp.innerHTML = `
         <div class="wrapper">
 
             <div class="heading">
-                <comp-brand-name color="var(--fg-color1)">
-                    <div for="comp-brand-name" insert="content">Boho Princess</div>
-                </comp-brand-name>
+
+                <meta slot="brand-name" refParent="comp-footer">
+
             </div>
             <div class="footer-grids">
 

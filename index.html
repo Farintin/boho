@@ -14,41 +14,57 @@
     <!--<link rel="stylesheet" href="css/pro.css">-->
 </head>
 <body id="home">
-    <comp-header bgColor="#ff95b4">
+    <!--<comp-header bgColor="#ff95b4">
 
-        <div insert="col-1-content" for="comp-header">
+        <comp-slot name="col-1-content" refParent="comp-header">
             <icon-search stroke="var(--fg-color1)" link="search"></icon-search>
-        </div>
+        </comp-slot>
 
-        <div insert="col-2-content" for="comp-header">
+        <comp-slot name="col-2-content" refParent="comp-header">
             <comp-brand-name color="var(--fg-color1)">
-                <div for="comp-brand-name" insert="content">Boho Chic</div>
+                <comp-slot name="text" refParent="comp-brand-name">Boho Princess</comp-slot>
             </comp-brand-name>
-        </div>
+        </comp-slot>
         
-        <div insert="comp-nav-list" for="comp-header">
+        <comp-slot name="comp-nav-list" refParent="comp-header">
             <comp-nav-list color="var(--fg-color1)">
 
-                <div insert="content" for="comp-nav-list">
-                    <a class="item" href="#">home</a>
+                <comp-slot name="content" refParent="comp-nav-list">
+                    <a class="item active" href="#">home</a>
                     <a class="item" href="#">about</a>
                     <a class="item" href="#">collections</a>
                     <a class="item" href="#">contact</a>
-                </div>
+                </comp-slot>
     
             </comp-nav-list>
-        </div>
+        </comp-slot>
         
-        <div insert="col-3-content" for="comp-header">
+        <comp-slot name="col-3-content" refParent="comp-header">
             <icon-bag stroke="var(--fg-color1)" link="cart"></icon-bag>
-        </div>
+        </comp-slot>
 
-    </comp-header>
+    </comp-header>-->
 
-    <comp-hero bgColor="red" bgImg="img/symbol-scatter-haikei.png"></comp-hero>
+    <comp-hero-slider>
+        
+        <comp-slot name="slides" refParent="comp-hero-slider">
+            <comp-hero1 bgColor="red" bgImg="img/symbol-scatter-haikei.png"></comp-hero1>
+        </comp-slot>
 
-    <comp-collections-list></comp-collections-list>
-    <comp-footer></comp-footer>
+    </comp-hero-slider>
+
+    <!--<comp-hero1 bgColor="red" bgImg="img/symbol-scatter-haikei.png"></comp-hero1>-->
+
+    <!--<comp-collections-list></comp-collections-list>
+    <comp-footer>
+
+        <comp-slot name="brand-name" refParent="comp-footer">
+            <comp-brand-name color="var(--fg-color1)">
+                <comp-slot name="text" refParent="comp-brand-name">Boho Princess</comp-slot>
+            </comp-brand-name>
+        </comp-slot>
+
+    </comp-footer>-->
 
 
 
@@ -64,7 +80,8 @@
     <script src="component/icon/bag.js"></script>
     <script src="component/icon/search.js"></script>
 
-    <script src="component/hero.js"></script>
+    <script src="component/hero1.js"></script>
+    <script src="component/hero-slider.js"></script>
 
     <script src="component/collection-list.js"></script>
 

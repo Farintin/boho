@@ -59,11 +59,10 @@ class Comp extends HTMLElement {
     constructor(temp) {
         super();
 
-        this.tempContentParentNode = this;
-        this.newTemp = temp;
-        this.comp_parseTemp();
-        
-        this.inserts = this.querySelectorAll(`*[insert][for="${this.tagName.toLowerCase()}"]`);
+        //this.tempContentParentNode = this;
+        //this.newTemp = temp;
+        //comp_parseTemp(this);
+        this.appendChild(temp.content.cloneNode(true));
 
         this.css = {
             bgColor: {
@@ -111,15 +110,16 @@ class Comp extends HTMLElement {
 
     connectedCallback() {
         if (this.isConnected) {
-
-            for (let node of this.inserts) {
-                let insertTarget = this.querySelector(`comp-insert[name="${node.getAttribute("insert")}"][for="${this.tagName.toLowerCase()}"]`);
-                insertTarget.outerHTML = node.innerHTML;
-                node.remove()
-            };
-            let compNodes = this.querySelectorAll('comp-insert');
-            for (let node of compNodes) {
-                node.remove()
+            this.newSlots = this.querySelectorAll(`comp-slot[refParent="${this.tagName.toLowerCase()}"]`);
+            console.log(this.tagName.toLowerCase(), this.newSlots.length);
+            let i = 0;
+            for (let slotNode of this.newSlots) {
+                i += 1;
+                console.log(i, this.tagName.toLowerCase(), slotNode);
+                let slotName = slotNode.getAttribute("name");
+                let slotTarget = this.querySelector(`*[slot="${slotName}"][refParent="${this.tagName.toLowerCase()}"]`);
+                slotTarget.outerHTML = slotNode.innerHTML;
+                slotNode.remove()
             };
 
             if (this.selectorsMetaNode) {
@@ -141,12 +141,6 @@ class Comp extends HTMLElement {
 
     }
 
-    comp_parseTemp() {
-        if (this.newTemp) {
-            this.tempContentParentNode.appendChild(this.newTemp.content.cloneNode(true));
-            this.newTemp = null
-        }
-    }
 };
 
 
@@ -169,9 +163,9 @@ class Icon extends Comp {
 
 
 
-class Insert extends HTMLElement {
+class mySlot extends HTMLElement {
     constructor() {
         super()
     }
 };
-window.customElements.define("comp-insert", Insert)
+window.customElements.define("comp-slot", mySlot)

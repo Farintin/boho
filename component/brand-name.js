@@ -16,7 +16,7 @@ brandNameTemp.innerHTML = `
 <div class="comp brand-name">
   <a href="#" class="text">
 
-    <comp-insert name="content" for="comp-brand-name"></comp-insert>
+    <meta slot="text" refParent="comp-brand-name">
     
   </a>
 </div>

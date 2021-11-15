@@ -1,9 +1,9 @@
-const heroTemp = document.createElement("template");
-heroTemp.innerHTML = `
-<style for="comp-hero">
+const hero1Temp = document.createElement("template");
+hero1Temp.innerHTML = `
+<style for="comp-hero1">
     .hero {
-        --hero-height: 95vh;
-        height: var(--hero-height);
+        --hero-h: 95vh;
+        height: var(--hero-h);
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -38,21 +38,21 @@ heroTemp.innerHTML = `
         flex-direction: column;
         justify-content: center;
     }
-    .hero .col-1 > * {
+    .hero1 .col-1 > * {
         margin: 16px 0;
     }
-    .hero .col-2 {
+    .hero1 .col-2 {
         align-items: center;
     }
 
-    .hero .col-2 .image {
-        --image-h: calc(var(--hero-height) * .87);
+    .hero1 .col-2 .image {
+        --image-h: calc(var(--hero-h) * .87);
         --image-w: calc(var(--image-h) * .75);
         width: var(--image-w);
         height: var(--image-h);
         position: relative;
     }
-    .hero .col-2 .image .frame {
+    .hero1 .col-2 .image .frame {
         position: absolute;
         top: 0;
         right: 0;
@@ -61,7 +61,7 @@ heroTemp.innerHTML = `
         border: 3px solid;
         border-color: #fff;
     }
-    .hero .col-2 .image img {
+    .hero1 .col-2 .image img {
         position: absolute;
         left: 0;
         bottom: 0;
@@ -71,9 +71,9 @@ heroTemp.innerHTML = `
     }
 </style>
 
-<meta id="selectors" bgColor=".hero" bgImg=".hero">
+<meta id="selectors" bgColor=".hero1" bgImg=".hero1">
 
-<section class="hero">
+<section class="hero hero1">
     <div class="overlay"></div>
     <div class="container">
         <div class="wrapper">
@@ -103,9 +103,9 @@ heroTemp.innerHTML = `
 </section>
 `;
 
-class Hero extends Comp {
+class Hero1 extends Comp {
   constructor() {
-    super(heroTemp)
+    super(hero1Temp)
   }
 };
-window.customElements.define("comp-hero", Hero)
+window.customElements.define("comp-hero1", Hero1)
